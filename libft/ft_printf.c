@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 15:59:51 by allallem          #+#    #+#             */
-/*   Updated: 2018/01/27 16:42:32 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/01 18:13:43 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ static void		ft_startpf(const char *str, t_pfspe *p)
 
 int				ft_printf(const char *str, ...)
 {
-	va_list ap;
-	t_pfspe st;
-	t_pfspe *p;
+	va_list			ap;
+	static t_pfspe	st;
+	static t_pfspe	*p;
 
 	p = &st;
 	ft_init_struct(p);

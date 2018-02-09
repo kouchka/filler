@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:21:45 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/01 18:56:45 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/08 02:42:56 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ static void		ft_incremente(char *str, t_filler *p, int *i)
 	while (str[*i])
 	{
 		(str[*i] == '.') ? p->point++: 0;
-		if (str[*i] == 'X')
+		if (str[*i] == 'X' || str[*i] == 'x')
 		{
 			p->posxx = *i - 4;
 			p->posxy = p->limity;
 			p->map[p->posxy][p->posxx] = 'X';
 			p->playertwo++;
 		}
-		if (str[*i] == 'O')
+		if (str[*i] == 'O' || str[*i] == 'o')
 		{
 			p->posox = *i - 4;
 			p->posoy = p->limity;
@@ -52,7 +52,7 @@ int			ft_read(t_filler *p)
 	if (p->limity == p->y)
 	{
 		if (!ft_check_tab(p))
-				return (0);
+			return (0);
 		return (1);
 	}
 	get_next_line(0, &str);
@@ -66,6 +66,7 @@ int			ft_read(t_filler *p)
 		return (0);
 	return (1);
 }
+
 int			ft_threat_fd(t_filler *p)
 {
 	char	*str;
@@ -73,9 +74,7 @@ int			ft_threat_fd(t_filler *p)
 
 	i = 0;
 	get_next_line(0, &str);
-	if (!ft_strncmp(str, "$$$ exec p1 : [../allallem.filler]", 34))
-		p->symbol = 'O';
-	else if (!ft_strncmp(str, "$$$ exec p2 : [../allallem.filler]", 34))
+	if (!ft_strncmp(str, "$$$ exec p2 : ", 12))
 		p->symbol = 'X';
 	free(str);
 	get_next_line(0, &str);

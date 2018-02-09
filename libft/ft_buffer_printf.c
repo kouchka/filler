@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 18:44:12 by allallem          #+#    #+#             */
-/*   Updated: 2018/01/27 16:44:25 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/01 18:14:24 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_pull_all(t_pfspe *point)
 {
 	write(1, point->contenu, point->cursor);
 	point->value = point->value + point->cursor;
-	point->cursor = 0;
 }
 
 void	ft_check_buffer(t_pfspe *point, char c)

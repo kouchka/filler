@@ -6,14 +6,14 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 13:46:32 by allallem          #+#    #+#             */
-/*   Updated: 2018/01/30 15:39:28 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/06 05:18:54 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # define B_PF_SIZE 1024
-# define BUFF_SIZE 1200
+# define BUFF_SIZE 1
 
 # include <unistd.h>
 # include <stdlib.h>

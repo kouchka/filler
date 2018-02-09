@@ -1,6 +1,5 @@
-seed = 7724
-X: timedout
-../allallem.filler: Segfault at 0
-../allallem.filler won
+seed = 8879
+X: error on input
+players/grati.filler won
 Score:
-0AGAINST0
+8AGAINST29

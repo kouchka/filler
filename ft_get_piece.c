@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 16:54:27 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/01 16:05:32 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/08 01:44:11 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	ft_create_piece(t_filler *p)
 	return (1);
 }
 
-static int	ft_fill_piece(t_filler *p, char *str)
+static int		ft_fill_piece(t_filler *p, char *str)
 {
 	int i;
 	int j;
@@ -73,24 +73,45 @@ static int	ft_fill_piece(t_filler *p, char *str)
 	return (1);
 }
 
+static void		ft_size(t_filler *p)
+{
+	int i;
+	int j;
+
+	i = 0;
+	p->size = 0;
+	while (i < p->piecey)
+	{
+		j = 0;
+		while (j < p->piecex)
+		{
+			if (p->piece[i][j] == '*')
+				p->size++;
+			j++;
+		}
+		i++;
+	}
+}
+
 int			ft_get_piece(t_filler *p)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
+	if (p->piecex > 0 && p->piecey > 0)
+		ft_free_piece(p);
 	get_next_line(0, &str);
 	while (ft_strstr_int("Piece ", str[i]))
 		i++;
-	p->piecex = ft_atoi(str + i);
+	p->piecey = ft_atoi(str + i);
 	while (ft_strstr_int("0123456789", str[i]))
 		i++;
-	p->piecey = ft_atoi(str + i);
-	if (p->piece)
-		ft_free_piece(p);
+	p->piecex = ft_atoi(str + i);
 	if (!ft_create_piece(p))
 		return (0);
 	free(str);
 	ft_fill_piece(p, str);
+	ft_size(p);
 	return (1);
 }
