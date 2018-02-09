@@ -6,13 +6,13 @@
 #    By: allallem <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/22 18:42:15 by allallem          #+#    #+#              #
-#    Updated: 2018/02/09 04:41:43 by allallem         ###   ########.fr        #
+#    Updated: 2018/02/09 08:50:41 by allallem         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME	=	allallem.filler
 
-SRCS	= main.c ft_threat_fd.c ft_filler.c ft_create_map.c ft_get_piece.c ft_update_map.c ft_place_piece.c ft_intelligent_placement.c ft_up_left.c ft_bottom_left.c ft_bottom_right.c ft_up_right.c ft_direction.c
+SRCS	= main.c ft_threat_fd.c ft_filler.c ft_create_map.c ft_get_piece.c ft_update_map.c ft_place_piece.c ft_intelligent_placement.c ft_up_left.c ft_bottom_left.c ft_bottom_right.c ft_up_right.c ft_direction.c ft_placepiece_spe.c
 
 OBJS	=	$(SRCS:.c=.o)
 

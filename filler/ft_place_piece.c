@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 16:09:31 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 02:22:11 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/09 08:51:17 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static int		ft_checkplace(t_filler *p)
 	return (1);
 }
 
-int				ft_check_if_ok(t_filler *p)
+static int		ft_check_if_ok(t_filler *p)
 {
 	if ((p->contact == 1 && p->value == p->size) || p->myposy == p->y)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 04:45:35 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 07:28:51 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/09 10:20:44 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,32 @@ static void	ft_init_best(t_filler *p)
 	p->besty = -p->piecey;
 }
 
-void		ft_redirection_up_left(t_filler *p)
+static void	ft_lfmylast(t_filler *p)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (p->map[i])
+	{
+		j = 0;
+		while (p->map[i][j] && p->map[i][j] != p->symbol + 32)
+			j++;
+		if (p->map[i][j] == p->symbol + 32)
+		{
+			p->myposx = j - p->piecex;
+			p->myposy = i - p->piecey;
+			return ;
+		}
+		i++;
+	}
+}
+
+static void	ft_redirection_up_left(t_filler *p)
 {
 	ft_lfennemie(p);
-	dprintf(3, "%i %i %c\n", p->poseny, p->posenx, p->other);
+	ft_lfmylast(p);
 	if (p->posenx > p->myposx && p->poseny > p->myposy)
 	{
 		dprintf(3, "up\n");
@@ -46,7 +68,7 @@ void		ft_redirection_up_left(t_filler *p)
 	}
 	else
 		ft_place_piece(p);
-	dprintf(3, "%i %i\n", p->besty, p->bestx);
+	dprintf(3, "answer : y%i x%i\n", p->besty, p->bestx);
 	ft_printf("%i %i\n", p->besty, p->bestx);
 }
 

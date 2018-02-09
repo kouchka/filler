@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:22:18 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 04:41:50 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/09 08:49:36 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ void			ft_right(t_filler *p);
 void			ft_left(t_filler *p);
 void			ft_bottom(t_filler *p);
 void			ft_lfennemie(t_filler *p);
+void			ft_placepiece_spe(t_filler *p);
 
 #endif

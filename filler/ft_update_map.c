@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 16:16:16 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 08:00:34 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/09 09:35:45 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void		ft_update_map(t_filler *p)
 			ft_check_str(p, str, j, i);
 			j++;
 		}
-		dprintf(3, "%s\n", p->map[i]);
 		free(str);
 		i++;
 	}
