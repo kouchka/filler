@@ -6,21 +6,35 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 15:44:23 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/07 05:26:55 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 14:20:01 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-void		ft_reinit(t_filler *p)
+static void	ft_assign(t_filler *p)
 {
-		p->contact = 0;
-		p->value = 0;
-		p->myposx = 0;
-		p->myposy = 0;
+	if (p->symbol == 'O')
+	{
+		p->playerx = p->posox;
+		p->playery = p->posoy;
+	}
+	else
+	{
+		p->playerx = p->posxx;
+		p->playery = p->posxy;
+	}
 }
 
-static void	ft_jump(char *str)
+void		ft_reinit(t_filler *p)
+{
+	p->contact = 0;
+	p->value = 0;
+	p->myposx = 0;
+	p->myposy = 0;
+}
+
+void		ft_jump(char *str)
 {
 	while (ft_strncmp("    0", str, 5) != 0)
 	{
@@ -36,6 +50,7 @@ void		ft_filler(t_filler *p)
 
 	ft_get_piece(p);
 	ft_intelligent_placement(p);
+	ft_assign(p);
 	while (get_next_line(0, &str))
 	{
 		ft_reinit(p);

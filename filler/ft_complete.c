@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_map.c                                    :+:      :+:    :+:   */
+/*   ft_complete.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/31 16:42:55 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/10 13:41:23 by allallem         ###   ########.fr       */
+/*   Created: 2018/02/10 17:18:08 by allallem          #+#    #+#             */
+/*   Updated: 2018/02/10 17:31:28 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int		ft_create_map(t_filler *p)
+void		ft_complete(t_filler *p)
 {
-	int i;
-	int j;
+	char *str;
 
-	i = 0;
-	if (!(p->map = (char**)malloc(sizeof(char*) * p->y + 1)))
-		return (0);
-	p->map[p->y] = 0;
-	while (i < p->y)
+	ft_reinit(p);
+	ft_place_piece(p);
+	ft_printf("%i %i\n", p->myposy, p->myposx);
+	while (get_next_line(0, &str))
 	{
-		j = 0;
-		if (!(p->map[i] = (char*)malloc(sizeof(char) * p->x + 1)))
-			return (0);
-		while (j < p->x)
-		{
-			p->map[i][j] = '.';
-			j++;
-		}
-		p->map[i][j] = '\0';
-		i++;
+		ft_reinit(p);
+		ft_jump(str);
+		ft_update_map(p);
+		ft_get_piece(p);
+		ft_place_piece(p);
+		ft_printf("%i %i\n", p->myposy, p->myposx);
 	}
-	return (1);
+	exit(EXIT_SUCCESS);
 }

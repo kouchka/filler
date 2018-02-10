@@ -6,15 +6,15 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:21:45 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/08 02:42:56 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 13:44:13 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static int			ft_check_tab(t_filler *p)
+static int		ft_check_tab(t_filler *p)
 {
-	if (p->point != (p->x * p->y) - (p->playerone + p->playertwo))
+	if (p->point != (p->x * p->y) - (p->playerx + p->playery))
 		return (0);
 	return (1);
 }
@@ -23,30 +23,30 @@ static void		ft_incremente(char *str, t_filler *p, int *i)
 {
 	while (str[*i])
 	{
-		(str[*i] == '.') ? p->point++: 0;
+		(str[*i] == '.') ? p->point++ : 0;
 		if (str[*i] == 'X' || str[*i] == 'x')
 		{
 			p->posxx = *i - 4;
 			p->posxy = p->limity;
 			p->map[p->posxy][p->posxx] = 'X';
-			p->playertwo++;
+			p->playery++;
 		}
 		if (str[*i] == 'O' || str[*i] == 'o')
 		{
 			p->posox = *i - 4;
 			p->posoy = p->limity;
 			p->map[p->posoy][p->posox] = 'O';
-			p->playerone++;
+			p->playerx++;
 		}
 		*i = *i + 1;
 	}
 	p->limity++;
 }
 
-int			ft_read(t_filler *p)
+int				ft_read(t_filler *p)
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	i = 0;
 	if (p->limity == p->y)
@@ -67,7 +67,7 @@ int			ft_read(t_filler *p)
 	return (1);
 }
 
-int			ft_threat_fd(t_filler *p)
+int				ft_threat_fd(t_filler *p)
 {
 	char	*str;
 	int		i;

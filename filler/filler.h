@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/27 19:22:18 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 08:49:36 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 17:21:22 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ typedef struct	s_filler
 	int			x;
 	int			y;
 	int			point;
-	int			playerone;
-	int			playertwo;
+	int			playerx;
+	int			playery;
 	int			limity;
 	int			myposx;
 	int			myposy;
@@ -66,5 +66,12 @@ void			ft_left(t_filler *p);
 void			ft_bottom(t_filler *p);
 void			ft_lfennemie(t_filler *p);
 void			ft_placepiece_spe(t_filler *p);
+void			ft_lfmylast(t_filler *p);
+int				ft_verif_border(t_filler *p, int i);
+void			ft_jump(char *str);
+void			ft_get_information(t_filler *p);
+void			ft_reinit(t_filler *p);
+void			ft_get_new_pos(t_filler *p);
+void			ft_complete(t_filler *p);
 
 #endif

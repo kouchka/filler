@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 16:54:27 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 10:02:09 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 14:53:34 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	ft_create_piece(t_filler *p)
 	return (1);
 }
 
-static int		ft_fill_piece(t_filler *p, char *str)
+static int	ft_fill_piece(t_filler *p, char *str)
 {
 	int i;
 	int j;
@@ -67,14 +67,14 @@ static int		ft_fill_piece(t_filler *p, char *str)
 				p->piece[i][j] = '*';
 			j++;
 		}
-		dprintf(3,"%s\n", str);
+		dprintf(3, "%s\n", str);
 		free(str);
 		i++;
 	}
 	return (1);
 }
 
-static void		ft_size(t_filler *p)
+static void	ft_size(t_filler *p)
 {
 	int i;
 	int j;

@@ -6,10 +6,9 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 08:51:09 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 03:56:50 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 15:57:39 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "filler.h"
 
@@ -19,6 +18,28 @@ static void		ft_init_best(t_filler *p)
 	p->myposy = -p->piecey;
 	p->bestx = p->x;
 	p->besty = p->y;
+}
+
+static void		ft_redirection_bottom_right(t_filler *p)
+{
+	while (1)
+	{
+		ft_lfennemie(p);
+		ft_lfmylast(p);
+		if (p->posenx > p->myposx && p->poseny > p->myposy)
+			ft_right(p);
+		else if (p->posenx < p->myposx && p->poseny > p->myposy)
+			ft_left(p);
+		else if (p->posenx > p->myposx && p->poseny < p->myposy)
+			ft_bottom(p);
+		else if (p->posenx < p->myposx && p->poseny < p->myposy)
+			ft_up(p);
+		else
+		{
+			ft_place_piece(p);
+			ft_printf("%i %i\n", p->myposy, p->myposx);
+		}
+	}
 }
 
 void			ft_bottom_right(t_filler *p)
@@ -39,6 +60,6 @@ void			ft_bottom_right(t_filler *p)
 	}
 	if (p->bestx != p->x && p->besty != p->y)
 		ft_printf("%i %i\n", p->besty, p->bestx);
-//	else
-//		ft_redirection(p);
+	else
+		ft_redirection_bottom_right(p);
 }

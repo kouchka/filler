@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 04:45:35 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 10:20:44 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 15:58:28 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	ft_init_best(t_filler *p)
 	p->besty = -p->piecey;
 }
 
-static void	ft_lfmylast(t_filler *p)
+void		ft_lfmylast(t_filler *p)
 {
 	int i;
 	int j;
@@ -44,32 +44,24 @@ static void	ft_lfmylast(t_filler *p)
 
 static void	ft_redirection_up_left(t_filler *p)
 {
-	ft_lfennemie(p);
-	ft_lfmylast(p);
-	if (p->posenx > p->myposx && p->poseny > p->myposy)
+	while (1)
 	{
-		dprintf(3, "up\n");
-		ft_up(p);
+		ft_lfennemie(p);
+		ft_lfmylast(p);
+		if (p->posenx > p->myposx && p->poseny > p->myposy)
+			ft_right(p);
+		else if (p->posenx < p->myposx && p->poseny > p->myposy)
+			ft_left(p);
+		else if (p->posenx > p->myposx && p->poseny < p->myposy)
+			ft_bottom(p);
+		else if (p->posenx < p->myposx && p->poseny < p->myposy)
+			ft_up(p);
+		else
+		{
+			ft_place_piece(p);
+			ft_printf("%i %i\n", p->myposy, p->myposx);
+		}
 	}
-	else if (p->posenx < p->myposx && p->poseny > p->myposy)
-	{
-		dprintf(3, "left\n");
-		ft_left(p);
-	}
-	else if (p->posenx > p->myposx && p->poseny < p->myposy)
-	{
-		dprintf(3, "bottom\n");
-		ft_bottom(p);
-	}
-	else if (p->posenx < p->myposx && p->poseny < p->myposy)
-	{
-		dprintf(3, "right\n");
-		ft_right(p);
-	}
-	else
-		ft_place_piece(p);
-	dprintf(3, "answer : y%i x%i\n", p->besty, p->bestx);
-	ft_printf("%i %i\n", p->besty, p->bestx);
 }
 
 void		ft_up_left(t_filler *p)

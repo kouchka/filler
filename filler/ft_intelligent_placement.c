@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/07 00:32:40 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 07:46:51 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 08:27:57 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ void		ft_intelligent_placement(t_filler *p)
 {
 	ft_get_pos(p);
 	ft_get_mid_pos(p);
-	if (p->myposx > p->x / 2 && p->myposy < p->y / 2)
+	if (p->playerx > p->x / 2 && p->playery < p->y / 2)
 		ft_up_right(p);
-	else if (p->myposx < p->x / 2 && p->myposy > p->y / 2)
+	else if (p->playerx < p->x / 2 && p->playery > p->y / 2)
 		ft_bottom_left(p);
-	else if (p->myposx > p->x / 2 && p->myposy > p->y / 2)
+	else if (p->playerx > p->x / 2 && p->playery > p->y / 2)
 		ft_bottom_right(p);
-	else if (p->myposx < p->x / 2 && p->myposy < p->y / 2)
+	else if (p->playerx < p->x / 2 && p->playery < p->y / 2)
 		ft_up_left(p);
 }

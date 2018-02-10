@@ -6,21 +6,20 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/09 08:46:34 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 10:12:05 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 13:42:18 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "filler.h"
 
-static void	ft_reinit(t_filler *p)
+static void	ft_reinite(t_filler *p)
 {
 	p->contact = 0;
 	p->value = 0;
 }
 
 static int	ft_check_x(t_filler *p, int *i, int *j)
-{		
+{
 	while (p->piece[*i][*j] == '.')
 		*j = *j + 1;
 	if ((p->myposx + *j >= p->x || p->myposx + *j < 0 || p->myposy + *i < 0)
@@ -74,7 +73,7 @@ void		ft_placepiece_spe(t_filler *p)
 	ft_checkplace(p);
 	while (!ft_check_if_ok(p))
 	{
-		ft_reinit(p);
+		ft_reinite(p);
 		if (p->myposx < p->x)
 			p->myposx++;
 		else

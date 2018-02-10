@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 16:16:16 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/09 09:35:45 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 13:44:52 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ static void	ft_check_str(t_filler *p, char *str, int j, int i)
 
 void		ft_update_map(t_filler *p)
 {
-	char *str;
-	int i;
-	int j;
+	char	*str;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (i < p->y)

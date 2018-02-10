@@ -1,191 +1,486 @@
-..*..
-..*..
-..**.
-......
-....*.
-....*.
-.
-*
-*
-*
-..*....
-.**....
-.......
-....*
-....*
-.....
-.
-*
-*
-.
-*.
-*.
-..
-..
-**
-..
-..
-*....
+....
+...*
+...*
 **...
-.....
-.......
-....**.
-....**.
-.......
-up
-possibilite: 11y 2x
-possibilite: 12y 0x
-possibilite: 12y 2x
-possibilite: 24y -7x
-answer : y11 x2
-...*..
-...**.
-......
-up
-possibilite: 11y 4x
-possibilite: 13y 4x
-possibilite: 24y -6x
-answer : y11 x4
-.**.
-***.
-.*..
-up
-possibilite: 9y 6x
-possibilite: 11y 8x
-possibilite: 24y -4x
-answer : y9 x6
-***...
-......
-up
-possibilite: 9y 5x
-possibilite: 9y 8x
-possibilite: 10y 8x
-possibilite: 24y -6x
-answer : y9 x5
+.**..
+.**
+...
+..***.
+.***.
+.*.*.
+..**.
+.**..
+..*
+..*
+***
+.**
+*
+*
+*
+**.
+.**
+*.
 **
-up
-possibilite: 24y -2x
-answer : y3 x2
-.*.
+.*
+right
+merde11 20
+*.
+*.
+right
+merde10 20
+......
+...**.
+right
+merde9 17
+.....*.
+.*..**.
+.****..
+right
+merde8 20
+***.
+right
+merde8 23
+..**...
+...*...
+..**...
+right
+merde6 20
+....
+.***
+***.
+..*.
+right
+merde3 20
+*..
+***
+right
+merde3 19
+......*
+......*
+......*
+right
+merde1 13
+.....*
+....**
+right
+merde0 14
+.....
+...*.
+...**
+...**
+right
+merde-1 14
+.**
+**.
+right
+merde0 15
+***
+right
+merde0 14
+..****.
+right
+merde0 9
+..**.
+right
+merde0 8
+.......
+.......
+...**..
+...**..
+right
+merde-2 6
+....**
+..****
+.***..
+......
+right
+merde0 18
+**
+..
+..
+..
+right
+merde0 8
+....*..
+....**.
+....**.
+right
+merde0 7
+*.
+*.
+*.
+right
+merde0 8
+**
+right
+merde0 7
+.....**
+....***
+......*
+right
+merde0 1
 .**
 .**
 ...
-up
-possibilite: 1y 0x
-possibilite: 2y 0x
-possibilite: 24y -3x
-answer : y1 x0
-.***.
-up
-possibilite: 1y -1x
-possibilite: 1y 0x
-possibilite: 2y 1x
-possibilite: 24y -5x
-answer : y1 x-1
-*
-*
-*
-up
-possibilite: 0y 0x
-possibilite: 1y 0x
-possibilite: 24y -1x
-answer : y0 x0
-..***.
-up
-possibilite: 0y -2x
-possibilite: 24y -6x
-answer : y0 x-2
-....***
-up
-possibilite: 0y -2x
-possibilite: 24y -7x
-answer : y0 x-2
-...*..
-..***.
-...**.
-....*.
-up
-possibilite: 0y 1x
-possibilite: 24y -6x
-answer : y0 x1
+...
+right
+merde0 3
+...****
+.......
+.......
+right
+merde0 -2
+*.
+*.
+right
+merde0 1
+....
+.**.
+..*.
+....
+right
+merde-1 19
 ......
-.....*
-...*.*
-...***
-up
-possibilite: 1y 2x
-possibilite: 24y -6x
-answer : y1 x2
-**
-up
-possibilite: 2y 6x
-possibilite: 2y 7x
-possibilite: 3y 6x
-possibilite: 3y 7x
-possibilite: 4y 4x
-possibilite: 4y 7x
-possibilite: 24y -2x
-answer : y2 x6
-...***.
-..****.
-...*.*.
-.......
-up
-possibilite: 24y -7x
-answer : y0 x4
-**
-up
-possibilite: 0y 6x
-possibilite: 0y 9x
-possibilite: 1y 9x
-possibilite: 2y 8x
-possibilite: 2y 9x
-possibilite: 24y -2x
-answer : y0 x6
-**
-up
-possibilite: 0y 5x
-possibilite: 24y -2x
-answer : y0 x5
-**.
-up
-possibilite: 24y -3x
-answer : y0 x9
-***....
-up
-possibilite: 24y -7x
-answer : y2 x8
-.......
-.....*.
-.....*.
-.......
-up
-possibilite: 0y 5x
-possibilite: 1y 3x
-possibilite: 1y 5x
-possibilite: 24y -7x
-answer : y0 x5
-.***
-up
-possibilite: 24y -4x
-answer : y3 x3
-.*..
+.***..
+**.*..
+***...
+right
+merde-1 23
+***.
 .**.
 ..**
-...*
-up
-possibilite: 24y -4x
-answer : y2 x7
-...*...
-...***.
-bottom
-answer : y4 x5
-**
-bottom
-answer : y5 x7
+right
+merde0 26
+......
+......
+.****.
 ..***.
-bottom
-answer : y5 x3
+right
+merde-2 27
+**
+right
+merde0 0
+.....*.
+.....*.
+.....**
+....**.
+right
+merde0 -3
+**
+..
+right
+merde0 17
+**..
+right
+merde0 31
+..***
+right
+merde0 30
+..*
+..*
+right
+merde0 -2
+..**
+right
+merde0 32
+..***
+right
+merde0 33
 ...**.
-bottom
-answer : y-1 x-6
+***...
+.**...
+right
+merde0 34
+****
+right
+merde1 36
+..***..
+****...
+
+
+0 0 1 0
+left
+*
+*
+*
+left
+merde0 13
+.....
+..***
+left
+merde0 29
+....
+****
+**..
+left
+merde1 13
+.....
+..*..
+..*..
+**...
+left
+merde-1 37
+...***.
+...**..
+...*...
+left
+merde2 5
+.....**
+.....**
+.....**
+.....*.
+left
+merde2 -5
+.
+*
+*
+*
+left
+merde0 22
+....**
+......
+left
+merde1 -2
+**..
+....
+....
+left
+merde1 13
+****..
+left
+merde2 3
+......
+......
+......
+***...
+left
+merde-1 25
+**.
+left
+merde1 24
+..
+*.
+*.
+*.
+left
+merde0 30
+....
+....
+..**
+..**
+left
+merde0 32
+*.
+**
+*.
+..
+left
+merde1 31
+.
+*
+*
+*
+left
+merde0 33
+.....**
+....***
+left
+merde2 33
+.....
+..**.
+left
+merde2 7
+...
+**.
+***
+**.
+left
+merde2 10
+..*
+.**
+.*.
+...
+left
+merde2 14
+..***
+..***
+left
+merde3 14
+.......
+...*...
+.***...
+..*....
+left
+merde1 22
+..*..
+.**..
+**...
+left
+merde2 25
+......
+....**
+left
+merde2 7
+......
+..**..
+..***.
+left
+merde2 25
+....
+**..
+....
+....
+left
+merde2 19
+....***
+.......
+.......
+.......
+left
+merde4 -3
+....**
+......
+left
+merde3 16
+***
+...
+...
+...
+left
+merde4 12
+...
+..*
+..*
+...
+left
+merde1 27
+....
+***.
+left
+merde3 29
+**
+left
+merde3 31
+.
+.
+*
+*
+left
+merde0 36
+.......
+.**....
+.......
+.......
+left
+merde3 7
+*.
+*.
+..
+..
+left
+merde3 32
+.****
+..*..
+left
+merde4 31
+..***.
+left
+merde4 33
+.......
+....*..
+..***..
+left
+merde3 -1
+.*..
+.**.
+.**.
+left
+merde3 37
+.**
+...
+...
+...
+left
+merde5 2
+.**
+left
+merde5 8
+......
+**....
+......
+......
+left
+merde4 8
+.***
+...*
+left
+merde5 21
+.**
+left
+merde5 10
+..**
+.**.
+**..
+.**.
+left
+merde5 24
+...
+.*.
+.*.
+.**
+left
+merde3 14
+......
+.**...
+left
+merde4 11
+*
+*
+left
+merde4 14
+***
+left
+merde5 15
+.**
+**.
+..*
+left
+merde5 31
+.***
+left
+merde5 16
+.*****
+left
+merde5 26
+...
+.**
+***
+left
+merde4 36
+.
+*
+*
+left
+merde3 25
+.......
+...**..
+.***...
+.****..
+left
+merde4 32
+..
+**
+..
+left
+merde4 33
+......
+**....
+*.....
+......
+left
+merde5 16
+.......
+.*.....
+.**....
+left
+merde4 -1
