@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 16:54:27 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/10 14:53:34 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/10 18:45:53 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ static int	ft_fill_piece(t_filler *p, char *str)
 				p->piece[i][j] = '*';
 			j++;
 		}
-		dprintf(3, "%s\n", str);
 		free(str);
 		i++;
 	}

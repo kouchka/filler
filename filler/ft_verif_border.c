@@ -6,27 +6,11 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/10 09:34:02 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/10 17:09:34 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/12 18:36:51 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-
-void		ft_get_information(t_filler *p)
-{
-	char *str;
-
-	p->bestx = -p->piecex;
-	p->besty = -p->piecey;
-	if (!get_next_line(0, &str))
-		exit(EXIT_SUCCESS);
-	ft_reinit(p);
-	ft_jump(str);
-	ft_update_map(p);
-	ft_get_piece(p);
-	ft_lfennemie(p);
-	ft_lfmylast(p);
-}
 
 static int	ft_verif_width(t_filler *p, int i)
 {
@@ -35,8 +19,12 @@ static int	ft_verif_width(t_filler *p, int i)
 	j = 0;
 	while (p->map[j])
 	{
-		if (p->map[j][i] == p->symbol || p->map[j][i] == p->symbol + 32)
-			return (0);
+		if (j + 1 < p->y)
+		{
+			if (p->map[j + 1][i] != p->other
+			&& (p->map[j][i] == p->symbol || p->map[j][i] == p->symbol + 32))
+				return (0);
+		}
 		j++;
 	}
 	return (1);
@@ -49,8 +37,12 @@ static int	ft_verif_lenght(t_filler *p, int i)
 	j = 0;
 	while (p->map[i][j])
 	{
-		if (p->map[i][j] == p->symbol || p->map[i][j] == p->symbol + 32)
-			return (0);
+		if (j + 1 < p->x)
+		{
+			if (p->map[i][j + 1] != p->other
+			&& (p->map[i][j] == p->symbol || p->map[i][j] == p->symbol + 32))
+				return (0);
+		}
 		j++;
 	}
 	return (1);

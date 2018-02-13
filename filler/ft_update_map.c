@@ -6,43 +6,21 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/01 16:16:16 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/10 13:44:52 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/11 13:54:34 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int			ft_check_around_mid(t_filler *p)
-{
-	int i;
-	int j;
-
-	i = p->posmidy - p->y / 10;
-	while (i < p->posmidy + p->y / 10)
-	{
-		j = p->posmidx - p->x / 10;
-		while (j < p->posmidx + p->x / 10)
-		{
-			if (p->map[i][j] != '.')
-				return (0);
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}
-
 static void	ft_check_str(t_filler *p, char *str, int j, int i)
 {
-	if ((str[j] == 'X' && p->map[i][j - 4] == 'x')
-			|| (p->symbol == 'X' && str[j] == 'X'))
+	if (str[j] == 'X' && p->map[i][j - 4] == 'x')
 		p->map[i][j - 4] = 'X';
 	else if (str[j] == 'X' && p->map[i][j - 4] == '.')
 		p->map[i][j - 4] = 'x';
 	else if (str[j] == 'O' && p->map[i][j - 4] == '.')
 		p->map[i][j - 4] = 'o';
-	else if ((str[j] == 'O' && p->map[i][j - 4] == 'o')
-			|| (p->symbol == 'O' && str[j] == 'O'))
+	else if (str[j] == 'O' && p->map[i][j - 4] == 'o')
 		p->map[i][j - 4] = 'O';
 }
 

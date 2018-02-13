@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/31 15:44:23 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/10 14:20:01 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/11 19:14:50 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ void		ft_reinit(t_filler *p)
 {
 	p->contact = 0;
 	p->value = 0;
-	p->myposx = 0;
-	p->myposy = 0;
+	p->myposx = -p->piecex;
+	p->myposy = -p->piecey;
+	p->bestx = -p->piecex;
+	p->besty = -p->piecey;
 }
 
 void		ft_jump(char *str)

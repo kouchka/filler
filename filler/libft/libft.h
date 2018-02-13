@@ -6,7 +6,7 @@
 /*   By: allallem <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 13:46:32 by allallem          #+#    #+#             */
-/*   Updated: 2018/02/06 05:18:54 by allallem         ###   ########.fr       */
+/*   Updated: 2018/02/12 16:15:26 by allallem         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,5 +170,6 @@ void				ft_putnbr_spe(intmax_t n);
 long long int		ft_strlen_longlong(char *str);
 int					get_next_line(const int fd, char **line);
 int					ft_sizeofint(int size);
+int					ft_abs(int i);
 
 #endif
