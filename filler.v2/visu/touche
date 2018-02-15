@@ -1,0 +1,5 @@
+bas = 125
+haut = 126
+gauche = 123
+droite = 124
+echap = 53
